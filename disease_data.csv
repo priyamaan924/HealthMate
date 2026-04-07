@@ -1,0 +1,8 @@
+fever,cough,headache,fatigue,disease
+1,1,0,1,Flu
+1,0,1,1,Dengue
+0,1,0,1,Cold
+0,0,1,1,Migraine
+1,1,1,1,Viral Infection
+0,1,1,0,Sinus
+

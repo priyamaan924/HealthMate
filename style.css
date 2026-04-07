@@ -1,0 +1,10 @@
+.metric-card {
+    background-color: #f5f7fa;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.big-title {
+    font-size: 40px;
+    font-weight: bold;
+}
