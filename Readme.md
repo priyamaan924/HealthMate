@@ -1,76 +1,72 @@
-# HealthMate AI
+#  HealthMate AI
 
-> Your Personal AI-Powered Health Companion
+> AI-powered health assistant for analysis, prediction, and smart recommendations
 
-HealthMate AI is a smart, interactive health assistant that helps users monitor their health, receive personalized recommendations, and interact with an AI chatbot for real-time guidance.
+---
 
-# Overview
+##  Overview
 
-HealthMate AI combines data analysis, machine learning, and AI-powered conversations to provide a complete health tracking and advisory platform.
+HealthMate AI is a Streamlit-based web application that helps users monitor their health, analyze key metrics like BMI, predict possible diseases, and receive personalized diet and workout recommendations.
 
-Whether you're tracking your fitness goals, analyzing your BMI, or asking health-related questions, HealthMate AI delivers intelligent and user-friendly solutions.
+It also includes an AI chatbot powered by Groq for real-time health guidance.
 
-# Features
+---
 
-## AI Chatbot (Groq Powered)
-
-* Real-time health conversations
-* Powered by LLaMA 3.1 via Groq API
-* Provides safe and general health advice
+##  Features
 
 ###  Health Analysis
 
 * BMI calculation
 * Health score evaluation
-* Personalized recommendations
+* Calorie recommendations
 
 ###  Disease Prediction
 
-* Predicts possible diseases based on symptoms
-* Simple ML-based classification
+* Predict diseases based on symptoms
+* Uses dataset (`disease_data.csv`)
 
 ###  Diet Recommendation
 
-* Goal-based diet plans
+* Goal-based diet suggestions
 * Supports weight loss, gain, and maintenance
 
 ###  Workout Planner
 
 * Personalized workout suggestions
-* Based on user goals
+* Based on user health goals
 
-###  Health History
+###  Health History Tracking
 
-* Stores past health records
-* Track progress over time
+* Stores user data in SQLite database
+* View previous health records
 
-###  Dashboard
+###  AI Health Chatbot
 
-* Visualize health metrics
-* Interactive charts and trends
+* Powered by Groq API
+* Provides real-time health advice
 
 ---
 
-## Tech Stack
+##  Tech Stack
 
-| Category      | Technology           |
-| ------------- | -------------------- |
-| Frontend      | Streamlit            |
-| Backend       | Python               |
-| AI            | Groq API (LLaMA 3.1) |
-| Database      | SQLite               |
-| Data Handling | Pandas               |
-| Visualization | Plotly               |
+* **Frontend:** Streamlit
+* **Backend:** Python
+* **AI:** Groq API (LLaMA 3.1)
+* **Database:** SQLite
+* **Data Processing:** Pandas
+* **Visualization:** Plotly
 
+---
 
 ##  Project Structure
 
+```
 HealthMate/
 │
 ├── Pages/
 │   ├── chatbot.py
-│   ├── health_analysis.py
 │   ├── dashboard.py
+│   ├── health_analysis.py
 │   ├── history.py
 │   ├── profile.py
 │   └── reminders.py
@@ -78,19 +74,21 @@ HealthMate/
 ├── app.py
 ├── database.py
 ├── diet_recommender.py
+├── disease_data.csv
 ├── model.py
 ├── risk_predictor.py
 ├── workout_planner.py
 ├── style.css
 ├── users.db
-├── .env (excluded)
+├── .env (not included)
 └── README.md
 ```
 
+---
 
-## Getting Started
+##  Setup Instructions
 
-### Clone the Repository
+### 1️⃣ Clone Repository
 
 ```
 git clone https://github.com/priyamaan924/HealthMate.git
@@ -99,15 +97,15 @@ cd HealthMate
 
 ---
 
-###  Install Dependencies
+### 2️⃣ Install Dependencies
 
 ```
-pip install -r requirements.txt
+pip install streamlit groq python-dotenv pandas plotly
 ```
 
 ---
 
-###  Setup Environment Variables
+### 3️⃣ Setup Environment Variables
 
 Create a `.env` file:
 
@@ -117,7 +115,7 @@ GROQ_API_KEY=your_api_key_here
 
 ---
 
-###  Run the App
+### 4️⃣ Run Application
 
 ```
 streamlit run app.py
@@ -125,64 +123,23 @@ streamlit run app.py
 
 ---
 
-## Screenshots
-
-> *(Add screenshots here later for better presentation)*
-
-Example:
-
-```
-/screenshots/dashboard.png
-/screenshots/chatbot.png
-```
-
----
-
-##  Deployment
-
-You can deploy this app using:
-
-* Streamlit Community Cloud
-* Render
-
----
-
 ##  Future Improvements
 
-* Smart reminders & notifications
+* Personalized AI responses using user health data
 * PDF health report generation
-* Personalized AI using user data
-* Mobile-friendly UI
-* Live deployment
-
----
-
-## Contributing
-
-Contributions are welcome!
-
-If you'd like to improve this project:
-
-1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Submit a Pull Request
-
----
-
-## License
-
-This project is open-source and available under the MIT License.
+* Smart notifications and reminders
+* UI/UX improvements
+* Deployment for public access
 
 ---
 
 ##  Author
 
 **Priya**
-🔗 GitHub: https://github.com/priyamaan924
+GitHub: https://github.com/priyamaan924
 
 ---
 
-# Support
+## Support
 
-If you like this project, please consider giving it a ⭐ on GitHub!
+If you like this project, give it a ⭐ on GitHub!
