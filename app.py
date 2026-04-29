@@ -8,7 +8,7 @@ if "username" not in st.session_state:
 st.set_page_config(page_title="AI Health Assistant", layout="wide")
 
 create_user_table()
-
+st.title("💙 AI Health Assistant")
 # -------------------------
 # LOGIN SYSTEM
 # -------------------------
