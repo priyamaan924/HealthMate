@@ -32,13 +32,12 @@ if "username" not in st.session_state:
 
     st.stop()
 
-# MAIN APP
+# MAIN
 st.title("💙 AI Health Assistant")
 st.success(f"Logged in as: {st.session_state['username']}")
 
-st.sidebar.info("Use sidebar to navigate pages 👉")
+st.sidebar.info("Use sidebar to navigate 👉")
 
-# LOGOUT
 if st.sidebar.button("Logout"):
     st.session_state.clear()
     st.rerun()
