@@ -3,6 +3,9 @@ import pandas as pd
 import plotly.express as px
 from database import get_health_data
 
+if "username" not in st.session_state:
+    st.warning("Please login first")
+    st.stop()
 st.title("📜 Health History")
 
 username = "default_user"

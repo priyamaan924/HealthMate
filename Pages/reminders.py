@@ -1,6 +1,10 @@
 import streamlit as st
+import streamlit as st
 import datetime
 
+if "username" not in st.session_state:
+    st.warning("Please login first")
+    st.stop()
 st.title("Health Reminders")
 
 st.write("Set your daily health reminders")
